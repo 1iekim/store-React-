@@ -1,0 +1,29 @@
+{
+  "name": "store-react-",
+  "version": "1.0.0",
+  "description": "Project for learning React and DB from Ulbi TV",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1iekim/store-React-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1iekim/store-React-/issues"
+  },
+  "homepage": "https://github.com/1iekim/store-React-#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1"
+  }
+}
