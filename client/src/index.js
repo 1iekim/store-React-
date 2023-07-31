@@ -1,9 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { createContext } from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App";
+import UserStore from "./store/UserStore";
+import DeviceStore from "./store/DeviceStore";
 // import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export const Context = createContext(null);
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
+  <Context.Provider
+    value={{
+      user: new UserStore(),
+      device: new DeviceStore(),
+    }}
+  >
+    <App />,
+  </Context.Provider>
+);
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
