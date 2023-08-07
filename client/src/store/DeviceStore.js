@@ -5,10 +5,13 @@ export default class DeviceStore {
     this._types = [
       { id: 1, name: "Холодильники" },
       { id: 2, name: "Смартфоны" },
+      { id: 3, name: "Ноутбуки" },
     ];
     this._brands = [
       { id: 1, name: "Samsung" },
       { id: 2, name: "Apple" },
+      { id: 3, name: "Lenove" },
+      { id: 4, name: "Asus" },
     ];
     this._devices = [
       {
@@ -47,6 +50,8 @@ export default class DeviceStore {
         img: "de680ff6-38d2-4c29-8c61-6dbf783c8bff.jpg",
       },
     ];
+    this._selectedType = {};
+    this._selectedBrand = {};
     makeAutoObservable(this);
   }
 
@@ -62,6 +67,14 @@ export default class DeviceStore {
     this._devices = devices;
   }
 
+  setSelectedType(type) {
+    this._selectedType = type;
+  }
+
+  setSelectedBrand(brand) {
+    this._selectedBrand = brand;
+  }
+
   get types() {
     return this._types;
   }
@@ -72,5 +85,13 @@ export default class DeviceStore {
 
   get devices() {
     return this._devices;
+  }
+
+  get selectedType() {
+    return this._selectedType;
+  }
+
+  get selectedBrand() {
+    return this._selectedBrand;
   }
 }
