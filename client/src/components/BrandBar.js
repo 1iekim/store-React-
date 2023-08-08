@@ -1,13 +1,13 @@
 import { observer } from "mobx-react-lite";
 import { React, useContext } from "react";
 import { Context } from "..";
-import { Card, Row, Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 const BrandBar = observer(() => {
   const { device } = useContext(Context);
 
   return (
-    <Container className="d-flex">
+    <Container className="mr-2 d-flex">
       {device.brands.map((brand) => (
         <Card
           style={{ cursor: "pointer" }}
